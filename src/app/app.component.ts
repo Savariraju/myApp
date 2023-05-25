@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { timer } from 'rxjs';
+import { Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,17 @@ import { timer } from 'rxjs';
 export class AppComponent {
   title = 'myApp';
   public timerInfo: any = [];
+  // private timerSubscription: Subscription;
+
+  constructor() {}
   ngOnInit() {
-    const timer$ = timer(1000, 1000);
-    let i = 0;
-    timer$.subscribe(() => {
-      this.timerInfo.push({
-        title: i,
-      });
-      i++;
-    });
+    // const timer$ = timer(1000, 1000);
+    // let i = 0;
+    // timer$.subscribe(() => {
+    //   this.timerInfo.push({
+    //     title: i,
+    //   });
+    //   i++;
+    // });
   }
 }
