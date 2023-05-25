@@ -5,7 +5,7 @@
     [(ngModle)]="formData.message"
     required
   />
-  <span *ngIf="message.invalde && (message.draty || message.touched)">
+  <span *ngIf="message.invalid && (message.dirty || message.touched)">
     X Please enter value
   </span>
   <input type="submit" value="Send" />
