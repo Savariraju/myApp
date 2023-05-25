@@ -1,0 +1,12 @@
+<form #submitFor="ngForm" (ngSubmit)="submitForm(submitFor)" action="">
+  <input
+    type="text"
+    #message="ngModle"
+    [(ngModle)]="formData.message"
+    required
+  />
+  <span *ngIf="message.invalde && (message.draty || message.touched)">
+    X Please enter value
+  </span>
+  <input type="submit" value="Send" />
+</form>

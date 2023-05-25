@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  float: left;
+  position: relative;
+  display: block;
+}
+.col-md-12,
+.col-lg-12 {
+  width: 100%;
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.col-md-6,
+.col-lg-6 {
+  width: 50%;
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+}
