@@ -1,12 +1,14 @@
 <form #submitFor="ngForm" (ngSubmit)="submitForm(submitFor)" action="">
   <input
     type="text"
-    #message="ngModle"
-    [(ngModle)]="formData.message"
+    #message="ngModel"
+    [(ngModel)]="formData.message"
+    name="message"
     required
   />
   <span *ngIf="message.invalid && (message.dirty || message.touched)">
     X Please enter value
   </span>
   <input type="submit" value="Send" />
+  <app-child [message]="parentMessage"></app-child>
 </form>

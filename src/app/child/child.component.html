@@ -1,0 +1,15 @@
+<form #submitForm="ngForm" (ngSubmit)="sendReplay(submitForm)" action="">
+  <input
+    type="text"
+    name="replay"
+    id=""
+    #replay="ngModel"
+    [(ngModel)]="formData.replay"
+    required
+  />
+  <span *ngIf="replay.invalid && (replay.dirty || replay.touched)">
+    Please enter value
+  </span>
+  <input type="submit" value="Send" />
+</form>
+<p>{{ message }}</p>
