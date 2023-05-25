@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ParentComponent implements OnInit {
   public parentMessage: any;
   formData: any = {};
+  public showReplay: string = '';
   constructor() {}
 
   ngOnInit() {}
@@ -17,5 +18,9 @@ export class ParentComponent implements OnInit {
     if (form.valid) {
       this.parentMessage = this.formData.message;
     }
+  }
+
+  recivedReplay(messege: string) {
+    this.showReplay = messege;
   }
 }

@@ -10,5 +10,9 @@
     X Please enter value
   </span>
   <input type="submit" value="Send" />
-  <app-child [message]="parentMessage"></app-child>
+  <p>{{ showReplay }}</p>
+  <app-child
+    [message]="parentMessage"
+    (sendMessage)="recivedReplay($event)"
+  ></app-child>
 </form>
