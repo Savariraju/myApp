@@ -11,8 +11,4 @@
   </span>
   <input type="submit" value="Send" />
   <p>{{ showReplay }}</p>
-  <app-child
-    [message]="parentMessage"
-    (sendMessage)="recivedReplay($event)"
-  ></app-child>
 </form>

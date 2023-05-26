@@ -6,6 +6,15 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./main-section/main-section.module').then(
+            (mod) => mod.MainSectionModule
+          ),
+      },
+    ],
   },
 ];
 

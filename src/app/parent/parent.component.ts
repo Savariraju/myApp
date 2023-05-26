@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SendDataService } from '../service/send-data.service';
 
 @Component({
   selector: 'app-parent',
@@ -9,7 +10,7 @@ export class ParentComponent implements OnInit {
   public parentMessage: any;
   formData: any = {};
   public showReplay: string = '';
-  constructor() {}
+  constructor(private sendData: SendDataService) {}
 
   ngOnInit() {}
 
